@@ -7,10 +7,10 @@ const Home = () => {
     <div className="home">
       <div className="hero">
         <h1>
-          Minseok <br />
-          Crypto Market
+          WELCOME
+          <br /> Crypto Market
         </h1>
-        <p>MinseokMinseokMinseokMinseokMinseok</p>
+        <p>made by Minseok</p>
         <form>
           <input type="text" placeholder="search crypto" />
           <button type="submit">Search</button>
