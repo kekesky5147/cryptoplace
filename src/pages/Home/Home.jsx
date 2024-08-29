@@ -1,8 +1,12 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react"
+import React, { useContext, useState } from "react"
 import "./Home.css"
+import { CoinContext } from "../../context/CoinContext"
 
 const Home = () => {
+  const { allCoin, currency } = useContext(CoinContext)
+  const [displayCoin, setDisplayCoin] = useState([])
+
   return (
     <div className="home">
       <div className="hero">

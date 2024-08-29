@@ -14,6 +14,18 @@ const Navbar = () => {
         setCurrency({ name: "usd", symbol: "$" })
         break
       }
+      case "eur": {
+        setCurrency({ name: "eur", symbol: "€" })
+        break
+      }
+      case "won": {
+        setCurrency({ name: "won", symbol: "₩" })
+        break
+      }
+      default: {
+        setCurrency({ name: "usd", symbol: "$" })
+        break
+      }
     }
   }
 
