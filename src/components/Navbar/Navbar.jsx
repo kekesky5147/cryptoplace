@@ -22,6 +22,7 @@ const Navbar = () => {
         setCurrency({ name: "won", symbol: "₩" })
         break
       }
+
       default: {
         setCurrency({ name: "usd", symbol: "$" })
         break
@@ -40,8 +41,8 @@ const Navbar = () => {
       </ul>
       <div className="nav-right">
         <select onChange={currencyHandler}>
-          <option value="usd">USE</option>
-          <option value="uer">EUR</option>
+          <option value="usd">USD</option>
+          <option value="eur">EUR</option>
           <option value="won">WON</option>
         </select>
         <button>
