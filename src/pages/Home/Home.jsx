@@ -11,6 +11,10 @@ const Home = () => {
   // 하위 검색어가 포함된 검색결과 표시하는 기능 ex)bitcoin의 bit만 검색해도 bit를 포함한 모든 리스트 표시
   const inputHandler = (event) => {
     setInput(event.target.value)
+    if (event.target.value === "") {
+      setDisplayCoin(allCoin)
+      // 검색후에 검색어를 지우면 다시 상위 10개 코인 보여주기
+    }
   }
   const searchHandler = async (event) => {
     event.preventDefault()
