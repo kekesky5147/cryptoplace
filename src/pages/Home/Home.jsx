@@ -2,6 +2,7 @@
 import React, { useContext, useEffect, useState } from "react"
 import "./Home.css"
 import { CoinContext } from "../../context/CoinContext"
+import { Link } from "react-router-dom"
 
 const Home = () => {
   const { allCoin, currency } = useContext(CoinContext)
@@ -40,11 +41,20 @@ const Home = () => {
         <form onSubmit={searchHandler}>
           <input
             onChange={inputHandler}
+            list="coinlist"
             value={input}
             type="text"
             placeholder="search crypto"
             required
           />
+          {/* 검색어 입력시에 드롭다운으로 리스트 보여주기  */}
+          <datalist id="coinlist">
+            {allCoin.map((item, index) => (
+              <option key={index} value={item.name} />
+            ))}
+            {/* 검색어 입력시에 드롭다운으로 리스트 보여주기  */}
+          </datalist>
+
           <button type="submit">Search</button>
         </form>
       </div>
@@ -57,7 +67,7 @@ const Home = () => {
           <p className="market-cap">Market gap</p>
         </div>
         {displayCoin.slice(0, 10).map((item, index) => (
-          <div className="table-layout" key={index}>
+          <Link to={`/coin/${item.id}`} className="table-layout" key={index}>
             <p>{item.market_cap_rank}</p>
             <div className="line">
               <img src={item.image} alt="" />
@@ -75,7 +85,7 @@ const Home = () => {
               {currency.symbol}
               {item.market_cap.toLocaleString()}
             </p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
