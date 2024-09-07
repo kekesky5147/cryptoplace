@@ -15,8 +15,57 @@
     animation: rotate 2s infinite;
 }
 
-@ketframes rotate{
+@keyframes rotate{
     100%{
         transform: rotate(360deg);
     }
+}
+.coin {
+    padding: 0 20px;
+}
+.coin-name{
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 50px;
+    font-size: 20px;
+    font-weight: 300;
+    display: flex;
+    margin: 100px auto;
+    margin-bottom: 50px;
+}
+
+.coin-name img{
+    max-width: 100px;
+
+}
+.coin-name p b {
+    font-size: 40px;
+    font-weight: 500;
+}
+.coin-info{
+    max-width: 600px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+}
+.coin-info ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #5f5d5f;
+    list-style: none;
+}
+
+.coin-info ul li:last-child{
+    font-weight: 300;
+}
+
+.coin-chart{
+    max-width: 600px;
+    height: 250px;
+    margin: auto;
 }
